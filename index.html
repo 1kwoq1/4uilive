@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ValCup.pro</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <video id="video-bg" autoplay muted loop playsinline>
+        <!-- <source src="./image/abstractfon.mp4" type="video/webm"> -->
+        <source src="./image/backfon.mp4" type="video/mp4">
+        Ваш браузер не поддерживает видеофон.
+    </video>
+
+    <div class="background">
+        <header>
+            <div class="header-container">
+                <a href="index.html">
+                    <div class="logo-container">
+                        <img src="image/logo.png" alt="logo" class="logo-img">
+                        <span class="logo-text">ValCup<span class="gg">.pro</span></span>
+                    </div>
+                </a>
+                
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="index.html">ГЛАВНАЯ</a></li>
+                        <li><a href="index2.html">ТУРНИРЫ</a></li>
+                        <li><a href="#">МЕДИА</a></li>
+                        <li><a href="#">ТОП</a></li>
+                        <li><a href="#" id="faqLink">FAQ</a></li>
+                        <li><a href="#">МАГАЗИН</a></li>
+                    </ul>
+                </nav>
+                
+                <button class="login-btn" id="openModal">ВОЙТИ</button>
+            </div>
+        </header>
+
+        <main>
+            <section class="hero">
+                <h1>ValCup.pro</h1>
+                <p>Участвуй в эпических турнирах<br>докажи свой скилл и забирай крутые призы!<br>Регистрируйся, собирай команду и бросай вызов лучшим игрокам.</p>
+                
+                <div class="buttons">
+                    <button class="main-btn">СОЗДАТЬ ТУРНИР</button>
+                    <button class="main-btn" id="TournamentSchedule">РАСПИСАНИЕ</button>
+                    <button class="main-btn">ПРОГРАММА ЛОЯЛЬНОСТИ</button>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="background-footer">
+                <div class="footer-container">
+                    <div class="footer-content">
+                        <div class="footer-title">4UILIVE</div>
+                        
+                        <div class="social-icons">
+                            <a href="https://www.twitch.tv/4uilive" class="social-icon" target="_blank">
+                                <img src="image/twitch.png" alt="Twitch" class="icon-img">
+                            </a>
+                            
+                            <a href="https://t.me/foruilive" class="social-icon" target="_blank">
+                                <img src="image/telegram.png" alt="Telegram" class="icon-img">
+                            </a>
+                            
+                            <a href="#" class="social-icon">
+                                <img src="image/logo-footer.png" alt="">
+                            </a>
+                            
+                            <a href="https://www.tiktok.com/@4uilivechel?_t=ZS-8w07Qe9Bq0A&_r=1" class="social-icon" target="_blank">
+                                <img src="image/tiktok.png" alt="TikTok" class="icon-img">
+                            </a>
+                            
+                            <a href="https://www.youtube.com/@4uilive" class="social-icon" target="_blank">
+                                <img src="image/youtube.png" alt="YouTube" class="icon-img">
+                            </a>
+                        </div>
+                        
+                        <div class="copyright">
+                            © <script>document.write(new Date().getFullYear())</script> Все права защищены • 4UILIVE
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Модальное окно регистрации -->
+    <div id="registrationModal" class="modal">
+        <div class="modal-dop">
+        <div class="logo-modal">
+            <img src="./image/logo2.png" alt="">
+            <span class="modal-txt">ValCup<span class="gg2">.pro</span></span>
+        </div>
+        <div class="modal-content">
+            <div class="close-div">
+                <button class="close-btn" id="closeModal">&times;</button>  
+            </div>
+
+            <h2 class="modal-title">Регистрация</h2>
+            
+            <form class="registration-form">
+                <div class="input-group">
+                    <input type="email" id="email" name="email" placeholder="Электронная почта" required>
+                </div>
+                
+                <div class="input-group">
+                    <input type="text" id="referral" name="referral" required placeholder="Вставьте ссылку на ваш tracker.gg">
+                </div>
+                
+                <div class="input-group">
+                    <div class="password-container">
+                        <input type="password" id="password" name="password" required placeholder="Введите пароль">
+                        <button type="button" class="toggle-password" data-target="password">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                <circle cx="12" cy="12" r="3"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="input-group">
+                    <div class="password-container">
+                        <input type="password" id="confirmPassword" name="confirmPassword" required placeholder="Повторите пароль">
+                        <button type="button" class="toggle-password" data-target="confirmPassword">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                <circle cx="12" cy="12" r="3"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="checkbox-group">
+                    <input type="checkbox" id="agreement" name="agreement" required>
+                    <label for="agreement" class="agree">Нажимая кнопку «Регистрация», я даю свое согласие на обработку моих персональных данных</label>
+                </div>
+                
+                <button type="submit" class="register-btn">Регистрация</button>
+                
+                <div class="login-link">
+                    <span>У вас уже есть учетная запись?</span>
+                    <a href="#" class="enter-txt" id="switchToLogin">Войти</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    </div>
+
+    <!-- Модальное окно входа -->
+    <div id="loginModal" class="modal">
+        <div class="modal-dop">
+            <div class="logo-modal">
+            <img src="./image/logo2.png" alt="">
+            <span class="modal-txt">ValCup<span class="gg2">.pro</span></span>
+            </div>
+        <div class="modal-content">
+            
+            <div class="close-div">
+                <button class="close-btn" id="closeLoginModal">&times;</button>  
+            </div>
+
+            <h2 class="modal-title">Вход</h2>
+            
+            <form class="login-form">
+                <div class="input-group">
+                    <input type="email" id="loginEmail" name="loginEmail" placeholder="Электронная почта" required>
+                </div>
+                
+                <div class="input-group">
+                    <div class="password-container">
+                        <input type="password" id="loginPassword" name="loginPassword" required placeholder="Введите пароль">
+                        <button type="button" class="toggle-password" data-target="loginPassword">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                <circle cx="12" cy="12" r="3"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                
+                <button type="submit" class="login-submit-btn">Войти</button>
+                
+                <div class="forgot-password">
+                    <a href="#" id="forgotPassword">Забыли пароль?</a>
+                </div>
+                
+                <div class="register-link">
+                    <span>Нет учетной записи?</span>
+                    <a href="#" class="reg-txt" id="switchToRegister">Регистрация</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    </div>
+
+    <!-- Модальное окно поддержки -->
+    <div id="supportModal" class="modal">
+        <div class="modal-dop">
+            <div class="logo-modal">
+            <img src="./image/logo2.png" alt="">
+            <span class="modal-txt">ValCup<span class="gg2">.pro</span></span>
+        </div>
+        <div class="modal-content">
+            <div class="close-div">
+                <button class="close-btn" id="closeSupportModal">&times;</button>  
+            </div>
+
+            <h2 class="modal-title">Поддержка</h2>
+            
+            <form class="support-form">
+                <div class="input-group">
+                    <input type="email" id="supportEmail" name="supportEmail" placeholder="Электронная почта" required>
+                </div>
+                
+                <h2 class="modal-title2">Ваш вопрос</h2>
+                <div class="input-group">
+                    <textarea id="supportQuestion" name="supportQuestion" placeholder="Ваш вопрос" required></textarea>
+                </div>
+                
+                <button type="submit" class="support-submit-btn">Отправить</button>
+            </form>
+        </div>
+        </div>
+    </div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
